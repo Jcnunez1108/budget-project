@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.limpiarEstilos::after {
+.cleanStyle::after {
     content: "";
     display: table;
     clear: both;
@@ -19,11 +19,11 @@ body {
     font-weight: 400;
 }
 
-.derecha { float: right; }
+.right { float: right; }
 .rojo { color: #FF5049 !important; }
 .rojofocus:focus { border: 1px solid #FF5049 !important; }
 
-.cabecero {
+.headEr {
     height: 40vh;
     background-size: cover;
     background-position: center;
@@ -37,7 +37,7 @@ body {
     background: url(fondo.png), linear-gradient(to left, #7b4397, #dc2430)
 }
 
-.presupuesto {
+.budget {
     position: absolute;
     width: 350px;
     top: 50%;
@@ -46,14 +46,14 @@ body {
     color: #fff;
 }
 
-.presupuesto_titulo{
+.title_budget{
     font-size: 20px;
     text-align: center;
     margin-bottom: 10px;
     font-weight: 300;
 }
 
-.presupuesto_valor {
+.value_budget {
     font-weight: 300;
     font-size: 46px;
     text-align: center;
@@ -61,37 +61,37 @@ body {
     letter-spacing: 2px;
 }
 
-.presupuesto_ingreso,
-.presupuesto_egreso {
+.income_budget,
+.budget_egress {
     padding: 12px;
     text-transform: uppercase;
 }
 
-.presupuesto_ingreso {
+.income_budget {
     margin-bottom: 10px;
     background-color: #28B9B5;
 }
 
-.presupuesto_egreso {
+.budget_egress {
     background-color: #FF5049;
 }
 
-.presupuesto_ingreso--texto,
-.presupuesto_egreso--texto {
+.income_budget--text,
+.budget_egress--text {
     float: left;
     font-size: 13px;
     color: #fff;
     margin-top: 2px;
 }
 
-.presupuesto_ingreso--valor,
-.presupuesto_egreso--valor {
+.income_budget--value,
+.budget_egress--value {
     letter-spacing: 1px;
     float: left;
 }
 
-.presupuesto_ingreso--porcentaje,
-.presupuesto_egreso--porcentaje {
+.income_budget--percent,
+.budget_egress--percent {
     float: left;
     width: 34px;
     font-size: 11px;
@@ -99,7 +99,7 @@ body {
     margin-left: 10px;
 }
 
-.presupuesto_egreso--porcentaje {
+.budget_egress--percent {
     background-color: rgba(255, 255, 255, 0.2);
     text-align: center;
     border-radius: 3px;

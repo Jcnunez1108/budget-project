@@ -6,53 +6,53 @@
     <title>Aplicacion presupuesto</title>
     <link rel="stylesheet" href="/css/estilos.css">
 </head>
-<body onload="cargarApp()">
-    <div class="cabecero">
-        <div class="presupuesto">
-            <div class="presupuesto_titulo">
+<body onload="appCharger()">
+    <div class="headEr">
+        <div class="budget">
+            <div class="title_budget">
                 Presupuesto Disponible
             </div>
-            <div class="presupuesto_valor" id="presupuesto">+ 2,000.00</div>
-            <div class="presupuesto_ingreso limpiarEstilos">
-                <div class="presupuesto_ingreso--texto">Ingresos</div>
-                <div class="derecha">
-                    <div class="presupuesto_ingreso--valor" id="ingreso">+ 4,000.00</div>
-                    <div class="presupuesto_ingreso--porcentaje">&nbsp;</div>
+            <div class="value_budget" id="budget">+ 2,000.00</div>
+            <div class="income_budget cleanStyle">
+                <div class="income_budget--text">Ingresos</div>
+                <div class="right">
+                    <div class="income_budget--value" id="income">+ 4,000.00</div>
+                    <div class="income_budget--percent">&nbsp;</div>
                 </div>
             </div>
-            <div class="presupuesto_egreso limpiarEstilos">
-                <div class="presupuesto_egreso--texto">Egresos</div>
-                <div class="derecha limpiarEstilos">
-                    <div class="presupuesto_egreso--valor" id="egreso">- 1,900.00</div>
-                    <div class="presupuesto_egreso--porcentaje" id="porcentaje">45%</div>
+            <div class="budget_egress cleanStyle">
+                <div class="budget_egress--text">Egresos</div>
+                <div class="right cleanStyle">
+                    <div class="budget_egress--value" id="egress">- 1,900.00</div>
+                    <div class="budget_egress--percent" id="percent">45%</div>
                 </div>
             </div>
         </div>
     </div>
-    <form id="forma" onsubmit="return false;">
+    <form id="form" onsubmit="return false;">
         <div class="agregar"></div>
         <div class="agregar_contenedor">
             <select class="agregar_tipo" id="tipo">
-                <option value="ingreso" selected>+</option>
-                <option value="egreso" selected>-</option>
+                <option value="Income" selected>+</option>
+                <option value="egress" selected>-</option>
             </select>
             <input type="text" class="agregar_descripcion" placeholder="Agregar Descripcion" id="descripcion"/>
             <input type="number" class="agregar_valor" placeholder="Valor" id="valor" step="any"/>
-            <button class="agregar_btn" onclick="agregarDato()">
+            <button class="agregar_btn" onclick="addData()">
                 <ion-icon name="checkmark-circle-outline"></ion-icon>
             </button>
         </div>
     </form>
-    <div class="contenedor limpiarEstilos">
-        <div class="ingreso">
+    <div class="contenedor cleanStyle">
+        <div class="Income">
             <h2 class="ingreso_titulo">Ingresos</h2>
-            <div id="lista-ingresos">
+            <div id="list-incomes">
                 
             </div>
         </div>
-        <div class="egreso">
+        <div class="egress">
             <h2 class="egreso_titulo">Egresos</h2>
-            <div id="lista-egresos">
+            <div id="list-egress">
                 
             </div>
         </div>
