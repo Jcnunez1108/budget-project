@@ -1,4 +1,4 @@
-class Dato {
+class Data {
   constructor(description, value) {
     this._description = description;
     this._value = value;

@@ -1,9 +1,9 @@
-class Income extends Dato {
-  static incomeCounter = 0;
+class Egress extends Data {
+  static egressCounter = 0;
 
   constructor(description, value) {
     super(description, value);
-    this._id = ++Income.incomeCounter;
+    this._id = ++Egress.egressCounter;
   }
   get id() {
     return this._id;
