@@ -10,18 +10,18 @@
     <div class="headEr">
         <div class="budget">
             <div class="title_budget">
-                Presupuesto Disponible
+                available budget
             </div>
             <div class="value_budget" id="budget">+ 2,000.00</div>
             <div class="income_budget cleanStyle">
-                <div class="income_budget--text">Ingresos</div>
+                <div class="income_budget--text">Income</div>
                 <div class="right">
                     <div class="income_budget--value" id="income">+ 4,000.00</div>
                     <div class="income_budget--percent">&nbsp;</div>
                 </div>
             </div>
             <div class="budget_egress cleanStyle">
-                <div class="budget_egress--text">Egresos</div>
+                <div class="budget_egress--text">Egress</div>
                 <div class="right cleanStyle">
                     <div class="budget_egress--value" id="egress">- 1,900.00</div>
                     <div class="budget_egress--percent" id="percent">45%</div>
@@ -30,28 +30,28 @@
         </div>
     </div>
     <form id="form" onsubmit="return false;">
-        <div class="agregar"></div>
-        <div class="agregar_contenedor">
-            <select class="agregar_tipo" id="tipo">
-                <option value="Income" selected>+</option>
+        <div class="add"></div>
+        <div class="add_container">
+            <select class="add_type" id="type">
+                <option value="income" selected>+</option>
                 <option value="egress" selected>-</option>
             </select>
-            <input type="text" class="agregar_descripcion" placeholder="Agregar Descripcion" id="descripcion"/>
-            <input type="number" class="agregar_valor" placeholder="Valor" id="valor" step="any"/>
-            <button class="agregar_btn" onclick="addData()">
+            <input type="text" class="add_description" placeholder="add Description" id="description"/>
+            <input type="number" class="add_value" placeholder="Value" id="value" step="any"/>
+            <button class="add_btn" onclick="addData()">
                 <ion-icon name="checkmark-circle-outline"></ion-icon>
             </button>
         </div>
     </form>
-    <div class="contenedor cleanStyle">
-        <div class="Income">
-            <h2 class="ingreso_titulo">Ingresos</h2>
+    <div class="container cleanStyle">
+        <div class="income">
+            <h2 class="title_income">Income</h2>
             <div id="list-incomes">
                 
             </div>
         </div>
         <div class="egress">
-            <h2 class="egreso_titulo">Egresos</h2>
+            <h2 class="title_egress">Egress</h2>
             <div id="list-egress">
                 
             </div>

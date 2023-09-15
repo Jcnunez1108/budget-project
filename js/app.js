@@ -3,7 +3,7 @@ const incomes = [
   new Income("Venta Coche", 1500.0),
 ];
 
-const Egress = [new egress("Renta", 1000.0), new egress("Ropa", 400)];
+const EgressS = [new Egress("Renta", 1000.0), new Egress("Ropa", 400)];
 
 let appCharger = () => {
   headCharger();
@@ -16,25 +16,24 @@ let totalincomes = () => {
   for (let income of incomes) {
     totalIncome += income.value;
   }
-  return totalincome;
+  return totalIncome;
 };
 
 let totalEgress = () => {
   let totalegress = 0;
-  for (let egress of egresss) {
+  for (let egress of EgressS) {
     totalegress += egress.value;
   }
   return totalegress;
 };
 
 let headCharger = () => {
-  let presupuesto = totalincomes() - totalEgress();
-  let procentajeegress = totalEgress() / totalincomes();
+  let budget = totalincomes() - totalEgress();
+  let percentEegress = totalEgress() / totalincomes();
 
-  document.getElementById("presupuesto").innerHTML = coinFormat(presupuesto);
-  document.getElementById("porcentaje").innerHTML =
-    formatPercent(procentajeegress);
-  document.getElementById("Income").innerHTML = coinFormat(totalincomes());
+  document.getElementById("budget").innerHTML = coinFormat(budget);
+  document.getElementById("percent").innerHTML = formatPercent(percentEegress);
+  document.getElementById("income").innerHTML = coinFormat(totalincomes());
   document.getElementById("egress").innerHTML = coinFormat(totalEgress());
 };
 
@@ -63,12 +62,12 @@ const incomeCharger = () => {
 
 const createIncomeHTML = (Income) => {
   let incomesHTML = `
-  <div class="elemento limpiarEstilos">
-  <div class="elemento_description">${Income.description}</div>
-  <div class="derecha limpiarEstilos">
-      <div class="elemento_value">${coinFormat(Income.value)}</div>
-      <div class="elemento_eliminar">
-          <button class="elemento_eliminar--btn">
+  <div class="element cleanStyle">
+  <div class="element_description">${Income.description}</div>
+  <div class="right cleanStyle">
+      <div class="element_value">${coinFormat(Income.value)}</div>
+      <div class="element_delete">
+          <button class="element_delete--btn">
               <ion-icon name="close-circle-outline"
               onclick="incomeDelete(${Income.id})"></ion-icon>
           </button>
@@ -88,27 +87,25 @@ const incomeDelete = (id) => {
 
 const egressCharger = () => {
   let egressHTML = "";
-  for (let egress of Egress) {
-    egressHTML += crearegressHTML(egress);
+  for (let egress of EgressS) {
+    egressHTML += createregressHTML(egress);
   }
   document.getElementById("list-egress").innerHTML = egressHTML;
 };
 
-const crearegressHTML = (egress) => {
+const createregressHTML = (egress) => {
   let egressHTML = `
-    <div class="elemento limpiarEstilos">
-                    <div class="elemento_description">${
-                      egress.description
-                    }</div>
-                    <div class="derecha limpiarEstilos">
-                        <div class="elemento_value">- ${coinFormat(
+    <div class="element cleanStyle">
+                    <div class="element_description">${egress.description}</div>
+                    <div class="right cleanStyle">
+                        <div class="element_value">- ${coinFormat(
                           egress.value
                         )}</div>
-                        <div class="elemento_porcentaje">${formatPercent(
+                        <div class="element_percent">${formatPercent(
                           egress.value / totalEgress()
                         )}</div>
-                        <div class="elemento_eliminar">
-                            <button class="elemento_eliminar--btn">
+                        <div class="element_delete">
+                            <button class="element_delete--btn">
                                 <ion-icon name="close-circle-outline"
                                 onclick="egressDelete(${egress.id})"></ion-icon>
                             </button>
@@ -119,8 +116,8 @@ const crearegressHTML = (egress) => {
 };
 
 const egressDelete = (id) => {
-  let deleteIndex = egresss.findIndex((egress) => egress.id === id);
-  egresss.splice(deleteIndex, 1);
+  let deleteIndex = EgressS.findIndex((egress) => egress.id === id);
+  EgressS.splice(deleteIndex, 1);
   headCharger();
   egressCharger();
 };
@@ -129,14 +126,14 @@ let addData = () => {
   let form = document.forms["form"];
   let type = form["type"];
   let description = form["description"];
-  let value = form["value"];
-  if (description.value !== "" && value.value !== "") {
-    if (type.value === "Income") {
-      incomes.push(new Income(description.value, +value.value));
+  let valuE = form["value"];
+  if (description.value !== "" && valuE.value !== "") {
+    if (type.value === "income") {
+      incomes.push(new Income(description.value, +valuE.value));
       headCharger();
       incomeCharger();
     } else if (type.value === "egress") {
-      egresss.push(new egress(description.value, +value.value));
+      EgressS.push(new Egress(description.value, +valuE.value));
       headCharger();
       egressCharger();
     }

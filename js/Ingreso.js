@@ -1,9 +1,9 @@
 class Income extends Dato {
-  static incomeCount = 0;
+  static incomeCounter = 0;
 
-  constructor(descripcion, valor) {
-    super(descripcion, valor);
-    this._id = ++Income.incomeCount;
+  constructor(description, value) {
+    super(description, value);
+    this._id = ++Income.incomeCounter;
   }
   get id() {
     return this._id;

@@ -106,19 +106,19 @@ body {
 }
 
 
-.agregar {
+.add {
     padding: 14px;
     border-bottom: 1px solid #e7e7e7;
     background-color: #f7f7f7;
 }
 
-.agregar_contenedor {
+.add_container {
     margin: 0 auto;
     margin-top: 15px;
     text-align: center;
 }
 
-.agregar_tipo {
+.add_type {
     width: 55px;
     border: 1px solid #e7e7e7;
     height: 44px;
@@ -130,8 +130,8 @@ body {
     transition: border 0.3s;
 }
 
-.agregar_descripcion,
-.agregar_valor {
+.add_description,
+.add_value {
     border: 1px solid #e7e7e7;
     background-color: #fff;
     color: inherit;
@@ -143,10 +143,10 @@ body {
     transition: border 0.3s;
 }
 
-.agregar_descripcion { width: 400px;}
-.agregar_valor { width: 100px;}
+.add_description { width: 400px;}
+.add_value { width: 100px;}
 
-.agregar_btn {
+.add_btn {
     font-size: 35px;
     background: none;
     border: none;
@@ -158,29 +158,29 @@ body {
     margin-left: 10px;
 }
 
-.agregar_btn:active { transform: translateY(2px); }
+.add_btn:active { transform: translateY(2px); }
 
-.agregar_tipo:focus,
-.agregar_descripcion:focus,
-.agregar_valor:focus {
+.add_type:focus,
+.add_description:focus,
+.add_value:focus {
     outline: none;
     border: 1px solid #28B9B5;
 }
 
-.agregar_btn:focus { outline: none; }
+.add_btn:focus { outline: none; }
 
-.contenedor {
+.container {
     width: 860px;
     margin: 60px auto;
 }
 
-.ingreso {
+.income {
     float: left;
     width: 370px;
     margin-right: 70px;
 }
 
-.egreso {
+.egress {
     float: left;
     width: 370px;
 }
@@ -192,27 +192,27 @@ h2 {
     margin-bottom: 15px;
 }
 
-.ingreso_titulo { color: #28B9B5; }
-.egreso_titulo { color: #FF5049; }
+.title_income { color: #28B9B5; }
+.title_egress { color: #FF5049; }
 
-.elemento {
+.element {
     padding: 13px;
     border-bottom: 1px solid #e7e7e7;
 }
 
-.elemento:first-child { border-top: 1px solid #e7e7e7; }
-.elemento:nth-child(even) { background-color: #f7f7f7; }
+.element:first-child { border-top: 1px solid #e7e7e7; }
+.element:nth-child(even) { background-color: #f7f7f7; }
 
-.elemento_descripcion {
+.element_description {
     float: left;
 }
 
-.elemento_valor {
+.element_value {
     float: left;
     transition: transform 0.3s;
 }
 
-.elemento_porcentaje {
+.element_percent {
     float: left;
     margin-left: 20px;
     transition: transform 0.3s;
@@ -224,23 +224,23 @@ h2 {
     text-align: center;
 }
 
-.ingreso .elemento_valor,
-.ingreso .elemento_eliminar--btn {
+.income .element_value,
+.income .element_delete--btn {
     color: #28B9B5;
 }
 
-.egreso .elemento_valor,
-.egreso .elemento_porcentaje,
-.egreso .elemento_eliminar--btn {
+.egress .element_value,
+.egress .element_porcentaje,
+.egress .element_delete--btn {
     color: #FF5049;
 }
 
 
-.elemento_eliminar {
+.element_delete {
     float: left;
 }
 
-.elemento_eliminar--btn {
+.element_delete--btn {
     font-size: 22px;
     background: none;
     border: none;
@@ -251,9 +251,10 @@ h2 {
     display: none;
 }
 
-.elemento_eliminar--btn:focus { outline: none; }
-.elemento_eliminar--btn:active { transform: translateY(2px); }
+.element_delete--btn:focus { outline: none; }
+.element_delete--btn:active { transform: translateY(2px); }
 
-.elemento:hover .elemento_eliminar--btn { display: block; }
-.elemento:hover .elemento_valor { transform: translateX(-20px); }
-.elemento:hover .elemento_porcentaje { transform: translateX(-20px); }
+.element:hover .element_delete--btn { display: block; }
+.element:hover .element_value { transform: translateX(-20px); }
+.element:hover .element_percent { transform: translateX(-20px); }
+
